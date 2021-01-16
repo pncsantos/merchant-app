@@ -1,0 +1,24 @@
+.photo-container {
+  text-align: center;
+  display: inline-block;
+}
+
+.photo-placeholder {
+  width: 120px;
+  height: 120px;
+  background: gray;
+}
+
+.photo-display {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.photo-text-disclaimer {
+  font-size: 12px;
+  margin-top: 4px;
+  color: green;
+  cursor: pointer;
+  font-weight: 500;
+}

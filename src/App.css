@@ -1,0 +1,28 @@
+.app-container {
+  display: block;
+}
+
+.app-header {
+  background-color: #282c34;
+  padding: 16px 24px;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.app-title {
+  cursor: pointer;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 64px;
+  color: white;
+  text-decoration: none;
+}
+
+.generic-container {
+  min-height: 200px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 32px 0px;
+}

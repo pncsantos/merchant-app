@@ -1,0 +1,28 @@
+.merchant-container {
+  padding: 48px;
+}
+
+.merchant-header {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.merchant-title {
+  display: flex;
+  flex: 1;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.merchant-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 16px 0px;
+}
+
+.merchant-details-box {
+  direction: flex;
+  flex: 1;
+}

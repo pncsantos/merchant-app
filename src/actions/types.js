@@ -1,0 +1,23 @@
+// Merchants
+export const GET_MERCHANTS = "GET_MERCHANTS";
+export const SET_MERCHANTS_FILTERS = "SET_MERCHANTS_FILTERS";
+export const UPLOAD_MERCHANTS_PHOTO = "UPLOAD_MERCHANTS_PHOTO";
+
+// Merchant
+export const CREATE_MERCHANT = "CREATE_MERCHANT";
+export const GET_MERCHANT_BY_ID = "GET_MERCHANT_BY_ID";
+export const UPDATE_MERCHANT = "UPDATE_MERCHANT";
+
+// Members
+export const GET_MEMBERS = "GET_MEMBERS";
+export const SET_MEMBERS_FILTERS = "SET_MEMBERS_FILTERS";
+
+// Member
+export const CREATE_MEMBER = "CREATE_MEMBER";
+export const DELETE_MEMBER = "DELETE_MEMBER";
+export const GET_MEMBER_BY_ID = "GET_MEMBER_BY_ID";
+export const UPDATE_MEMBER = "UPDATE_MEMBER";
+
+// Snack bars
+export const SHOW_SNACK_BAR = "SHOW_SNACK_BAR";
+export const HIDE_SNACK_BAR = "HIDE_SNACK_BAR";
