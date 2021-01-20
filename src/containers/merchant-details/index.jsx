@@ -39,12 +39,8 @@ function MerchantDetails({
   const merchantId = match ? match.params.id : null;
 
   useEffect(() => {
-    if (merchantId) {
-      getMerchantById(merchantId);
-      getMembers({ merchantId, ...filterParams });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    getMerchantById(merchantId);
+  }, [getMerchantById, merchantId]);
 
   useEffect(() => {
     getMembers({ merchantId, ...filterParams });
@@ -208,7 +204,7 @@ function MerchantDetails({
 
       {isDeleteModalOpen && selectedMember && (
         <DeleteMemberModal
-          closeModal={resetDeleteModal}
+          handleClose={resetDeleteModal}
           handleDeleteMember={handleConfirmDeleteMemberClick}
           isOpen={isDeleteModalOpen}
           member={selectedMember}
@@ -217,7 +213,7 @@ function MerchantDetails({
 
       {isFormModalOpen && (
         <MembersFormModal
-          closeModal={resetFormModal}
+          handleClose={resetFormModal}
           handleCreateNewMember={handleCreateNewMemberClick}
           handleUpdateMember={handleUpdateMemberClick}
           isOpen={isFormModalOpen}

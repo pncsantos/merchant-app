@@ -20,6 +20,8 @@ const COLUMN_HEADERS = [
   { id: "delete", label: "", minWidth: 20, align: "center" },
 ];
 
+const PAGE_SELECTION = [5, 10, 25];
+
 const useStyles = makeStyles({
   root: {
     width: "100%",
@@ -90,35 +92,34 @@ export default function MembersTable({
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {membersData
-                    .map((row) => {
-                      return (
-                        <TableRow
-                          hover
-                          role="checkbox"
-                          tabIndex={-1}
-                          key={row.id}
-                        >
-                          {COLUMN_HEADERS.map((column) => {
-                            const value = row[column.id];
-                            return (
-                              <TableCell key={column.id} align={column.align}>
-                                {renderColumn({
-                                  column,
-                                  value,
-                                  row,
-                                })}
-                              </TableCell>
-                            );
-                          })}
-                        </TableRow>
-                      );
-                    })}
+                  {membersData.map((row) => {
+                    return (
+                      <TableRow
+                        hover
+                        role="checkbox"
+                        tabIndex={-1}
+                        key={row.id}
+                      >
+                        {COLUMN_HEADERS.map((column) => {
+                          const value = row[column.id];
+                          return (
+                            <TableCell key={column.id} align={column.align}>
+                              {renderColumn({
+                                column,
+                                value,
+                                row,
+                              })}
+                            </TableCell>
+                          );
+                        })}
+                      </TableRow>
+                    );
+                  })}
                 </TableBody>
               </Table>
             </TableContainer>
             <TablePagination
-              rowsPerPageOptions={[5, 10, 25]}
+              rowsPerPageOptions={PAGE_SELECTION}
               component="div"
               count={totalCount}
               rowsPerPage={pageSize}

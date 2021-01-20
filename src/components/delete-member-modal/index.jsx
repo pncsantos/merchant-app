@@ -8,15 +8,11 @@ import {
 } from "@material-ui/core";
 
 export default function DeleteMemberDialog({
-  closeModal,
+  handleClose,
   handleDeleteMember,
   isOpen,
   member,
 }) {
-  const handleClose = () => {
-    closeModal();
-  };
-
   return (
     <Dialog
       open={isOpen}
@@ -27,8 +23,8 @@ export default function DeleteMemberDialog({
       <DialogTitle id="alert-dialog-title">{"Delete Member?"}</DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
-          Are you sure you want to remove {member ? `'${member.name}'` : "this member"}{" "}
-          from this merchant?
+          Are you sure you want to remove{" "}
+          {member ? `'${member.name}'` : "this member"} from this merchant?
         </DialogContentText>
       </DialogContent>
       <DialogActions>

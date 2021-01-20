@@ -20,6 +20,8 @@ const COLUMN_HEADERS = [
   { id: "edit", label: "", minWidth: 40, align: "center" },
 ];
 
+const PAGE_SELECTION = [5, 10, 25];
+
 const useStyles = makeStyles({
   root: {
     width: "100%",
@@ -113,7 +115,7 @@ export default function MerchantsTable({
               </Table>
             </TableContainer>
             <TablePagination
-              rowsPerPageOptions={[5, 10, 25]}
+              rowsPerPageOptions={PAGE_SELECTION}
               component="div"
               count={totalCount}
               rowsPerPage={pageSize}

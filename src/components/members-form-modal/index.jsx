@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 
 export default function MembersFormDialog({
-  closeModal,
+  handleClose,
   handleCreateNewMember,
   handleUpdateMember,
   isOpen,
@@ -18,10 +18,6 @@ export default function MembersFormDialog({
 }) {
   const [name, setName] = useState(member ? member.name : "");
   const [email, setEmail] = useState(member ? member.email : "");
-
-  const handleClose = () => {
-    closeModal();
-  };
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -48,7 +44,6 @@ export default function MembersFormDialog({
           <DialogContentText>
             {`${member ? "Update" : "Add"} team member details:`}
           </DialogContentText>
-
           <TextField
             margin="dense"
             id="email"

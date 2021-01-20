@@ -10,17 +10,13 @@ import {
 } from "@material-ui/core";
 
 export default function MerchantsFormDialog({
-  closeModal,
+  handleClose,
   handleCreateNewMerchant,
   handleUpdateMerchant,
   isOpen,
   merchant,
 }) {
   const [name, setName] = useState(merchant ? merchant.name : "");
-
-  const handleClose = () => {
-    closeModal();
-  };
 
   const handleSubmit = (evt) => {
     evt.preventDefault();

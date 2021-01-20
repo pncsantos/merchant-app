@@ -111,7 +111,7 @@ function Home({
 
       {isFormModalOpen && (
         <MerchantsFormModal
-          closeModal={resetFormModal}
+          handleClose={resetFormModal}
           handleCreateNewMerchant={handleCreateNewMerchantClick}
           handleUpdateMerchant={handleUpdateMerchantClick}
           isOpen={isFormModalOpen}
